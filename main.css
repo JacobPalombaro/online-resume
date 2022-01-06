@@ -1,115 +1,142 @@
-/*body{*/
-/*    text-decoration: none;*/
-/*    font-family: 'Montserrat', sans-serif;*/
-/*}*/
-/*.heading{*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    background-color: darkslategrey;*/
-/*    align-items: center;*/
-/*    border-style: hidden;*/
-/*}*/
-/*h1{*/
-/*    font-family: 'JetBrains-Mono', sans-serif;*/
-/*    color: white;*/
-/*    margin: 0;*/
-/*}*/
-/*h2{*/
-/*    color: #22ad7c;*/
-/*    margin: 0;*/
-/*}*/
-/*.contact-info{*/
-/*    box-sizing: border-box;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    background-color: darkslategrey;*/
-/*    color: white;*/
-/*    justify-content: center;*/
-/*    border-style: hidden;*/
-/*    border-width: 2px;*/
-/*}*/
-/*.contact-list {*/
-/*    display: flex;*/
-/*    list-style: none;*/
-/*    text-decoration: white;*/
-/*    justify-content: space-between;*/
-/*    flex-grow: 1;*/
-/*    padding-right: 110px;*/
-/*}*/
-/*.white a{*/
+body {
+    border: 1px solid black;
+}
 
-/*}*/
-#main{
+.container1 {
+    display: flex;
+    background-color: cadetblue;
+}
+
+.top {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.heading>h1 {
+    font-size: 400%;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.heading>hr {
+    width: 80%;
+    height: 3px;
+    color: aliceblue;
+}
+
+.contact-info>p {
     display: flex;
 }
 
-/*Contact Info (Might have to add flex property here)*/
-#header{
-    border: 2px solid red;
-    text-align: center;
-}
-
-#summary{
-    border: 2px solid purple;
-    text-align: center;
-}
-/*Tech Skills Section*/
-/*I needed to add flex property to give children containers the flex ability*/
-.overview{
-    border: 2px solid orange;
-    justify-content: space-evenly;
+.contact-info a {
     display: flex;
-    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
 }
 
-/*Overview for experience*/
-.overview-exp{
+/*.contact-info a:hover {*/
+/*    color: blue;*/
+/*}*/
+
+.contact-info img {
+    flex-direction: column;
+}
+
+#telephone {
+    height: 20px;
+    width: auto;
+}
+
+.logo {
+    height: 20px;
+    width: auto;
+}
+
+.container2 {
     display: flex;
-    flex-wrap: wrap;
-    /*justify-content: space-between;*/
-    border: 2px solid brown;
+    align-content: space-between;
 }
 
-
-/*title for skills section*/
-.title{
-    border: 2px solid blue;
-    width: 100%;
-    text-align: center;
-}
-
-/*title for experience section*/
-.overview-exp .title{
-    text-align: left;
-    width: 100%;
-}
-
-/*container for jobs qualified for*/
-.job-wanted{
-    border: 2px solid green;
-}
-
-/*experience type container*/
-.type{
-    border: 2px solid gold;
-}
-
-/*year experience occured container*/
-.year{
-    border: 2px solid teal;
-}
-
-/*container for type and year*/
-/*needed additional layer to make the containers not wrap*/
-.type-year{
-    width: 100%;
+.left {
+    padding: 1em;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    border: 2px solid brown;
+    flex-direction: column;
+    width: calc(65% - 1em);
 }
 
-#gpa{
-    border: 2px solid maroon;
+.left h2 {
+    padding-left: 5px;
+    border-bottom: 2px solid grey;
+    background-image: linear-gradient(to right, cadetblue, grey, white);
+
+}
+
+.proj-logo {
+    display: flex;
+}
+
+.right {
+    flex-direction: column;
+    padding: 1em;
+    display: flex;
+    width: calc(35% - 1em);
+}
+
+.right h2 {
+    padding-left: 5px;
+    border-bottom: 2px solid grey;
+    background-image: linear-gradient(to right, cadetblue, lightgrey, white);
+}
+
+.tech-skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.tech-skills li {
+    list-style-type: none;
+}
+
+.tech1 {
+    display: flex;
+    width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+    .heading>h1 {
+        font-size: 300%;
+        margin-top: 20px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .container2 {
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    .container2 hr {
+        display: none;
+    }
+
+
+    .left {
+        order: 2;
+        width: 100%;
+    }
+
+    .right {
+        width: 100%
+    }
 }
